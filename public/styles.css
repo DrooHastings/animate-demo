@@ -1,0 +1,30 @@
+body
+{
+  margin: 0;
+}
+
+.container
+{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 300px;
+  background: blue;
+}
+
+.box
+{
+  background: red;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  line-height: 200px;
+
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+h5 {
+  margin: auto;
+
+}
