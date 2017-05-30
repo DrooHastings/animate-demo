@@ -1,3 +1,4 @@
+/*First demo
 body
 {
   margin: 0;
@@ -27,4 +28,118 @@ body
 h5 {
   margin: auto;
 
+}*/
+body {
+  font: normal 18px/1.5 "Helvetica Neue", sans-serif;
+}
+
+
+.flex-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.flex-wrapper a {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: flex .4s;
+}
+
+.flex-wrapper .one {
+  background-image: url(https://indiabright.com/wp-content/uploads/2015/12/Cute-Doll-Wallpapers-For-Facebook-Cover-Picture-12.jpg);
+  background-color: red;
+}
+
+.flex-wrapper .two {
+  background-image: url(http://68.media.tumblr.com/006e00f7b69429d3c1b9caaecf678a7d/tumblr_nweq4glmRE1sj6o1eo1_1280.jpg);
+  background-color: green;
+}
+
+.flex-wrapper .three {
+  background-image: url(https://i.ytimg.com/vi/V_Eq84c_Voc/maxresdefault.jpg);
+  background-color: steelblue;
+}
+
+.flex-wrapper .four {
+  background-image: url(http://www.cartoonbrew.com/wp-content/uploads/2016/07/babymoana-900x620.jpg);
+  background-color: orange;
+}
+
+.flex-wrapper .five {
+  background-image: url(https://farm9.staticflickr.com/8816/18059501199_60462c22de_b.jpg);
+  background-color: tomato;
+}
+
+.flex-wrapper a:hover {
+  flex: 3;
+}
+
+.flex-wrapper .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color .4s;
+}
+
+.flex-wrapper a:hover .overlay {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.flex-wrapper .overlay-inner * {
+  visibility: hidden;
+  opacity: 0;
+  transform-style: preserve-3d;
+}
+
+.flex-wrapper .overlay h2 {
+  transform: translate3d(0, -60px, 0);
+}
+
+.flex-wrapper .overlay p {
+  transform: translate3d(0, 60px, 0);
+}
+
+.flex-wrapper a:hover .overlay-inner * {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: all .3s .3s;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .flex-wrapper {
+    flex-direction: column;
+  }
+
+  .flex-wrapper a:hover {
+    flex: 1;
+  }
+
+  .flex-wrapper a:hover .overlay {
+    background-color: transparent;
+  }
+
+  .flex-wrapper .overlay h2,
+  .flex-wrapper .overlay p {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
 }
